@@ -12,12 +12,12 @@ void loop() {
   
 
   digitalWrite(LED_BUILTIN, 1);
-  Serial.print("สวัสดี นันทพงศ์ อรุณเดช");
+  Serial.print("สวัสดี ธีรยา พุ่มตันวงษ์");
   Serial.print("light ...\n");
   delay(1000);
 
   digitalWrite(LED_BUILTIN, 0);
-  Serial.print("สวัสดี นันทพงศ์ อรุณเดช");
+  Serial.print("สวัสดี ธีรยา พุ่มตันวงษ์");
   Serial.print("not light ...\n");
   delay(1000);
 }
