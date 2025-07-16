@@ -1,23 +1,23 @@
-#define LED_BUILTIN 2
-void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
- 
-  pinMode(LED_BUILTIN, OUTPUT);
+int countdownTime = 100;  
 
+void setup() {
+  Serial.begin(9600);     
+  delay(1000);            
+  Serial.print("เริ่มนับถอยหลัง ");
+  Serial.print(countdownTime);
+  Serial.println(" วินาที...");
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  for (int i = countdownTime; i >= 0; i--) {
+    Serial.print("เหลือเวลา: ");
+    Serial.print(i);
+    Serial.println(" วินาที");
+    delay(1000); 
+  }
+
+  Serial.println("หมดเวลา!");
+
   
-
-  digitalWrite(LED_BUILTIN, 1);
-  Serial.print("สวัสดี อรกมล จันทรี");
-  Serial.print("light ...\n");
-  delay(1000);
-
-  digitalWrite(LED_BUILTIN, 0);
-  Serial.print("สวัสดี อรกมล จันทรี");
-  Serial.print("not light ...\n");
-  delay(1000);
+  while (true); 
 }
