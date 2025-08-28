@@ -6,7 +6,7 @@ void setup() {
   Serial.begin(9600);
   doorServo.attach(SERVO_PIN);
   doorServo.write(0);   // เริ่มต้นที่ตำแหน่ง "ล็อก"
-  pinMode(2,OUTPUT);
+  // pinMode(2,OUTPUT);
 }
 
 void loop() {
@@ -14,14 +14,14 @@ void loop() {
     char command = Serial.read();
 
     if (command == 'O') {
-      // doorServo.write(90);   // เปิด
+      doorServo.write(90);   // เปิด
       Serial.println("Door Opened");
-      digitalWrite(2,HIGH);
+      // digitalWrite(2,HIGH);
     } 
     else if (command == 'C') {
-      // doorServo.write(0);    // ล็อก
+      doorServo.write(0);    // ล็อก
       Serial.println("Door Locked");
-      digitalWrite(2,LOW);
+      // digitalWrite(2,LOW);
     }
   }
 }
